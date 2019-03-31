@@ -1,6 +1,17 @@
-import React from "react";
-// import { Menu as Nav, Icon, Button } from "element-react";
+import React from "react"
+import { Link } from 'react-router-dom'
+import { Auth, Hub } from 'aws-amplify'
 
-const Navbar = () => <div>Navbar</div>;
+const Navbar = () => {
 
-export default Navbar;
+	const handleLogout = () => Auth.signOut()
+
+	return(
+		<div>
+			<Link to='/'>Market place 🏘</Link>
+			<a href='/logout' onClick={handleLogout}>Logout</a>
+		</div>
+	)
+}
+
+export default Navbar
