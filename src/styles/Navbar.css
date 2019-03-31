@@ -1,0 +1,15 @@
+.navbar a {
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.appbar {
+	display: flex !important;
+	flex-direction: row !important;
+	justify-content: space-between !important;
+	align-items: center;
+	height: 70px;
+	padding: 0 10px;
+	background: #0b3e9c !important;
+}
