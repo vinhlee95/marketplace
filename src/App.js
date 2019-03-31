@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import HomePage from "./pages/HomePage"
 
+export const UserContext = React.createContext(null)
+
 class App extends React.Component {
 	state = { user: null };
 
@@ -36,7 +38,7 @@ class App extends React.Component {
 		}
 
     return (
-			<div>
+			<UserContext.Provider value={user}>
 				<Router>
 					<div>
 						<Navbar />
@@ -45,7 +47,7 @@ class App extends React.Component {
 						</Switch>
 					</div>
 				</Router>
-			</div>
+			</UserContext.Provider>
 		);
   }
 }
