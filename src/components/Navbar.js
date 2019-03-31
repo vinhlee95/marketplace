@@ -1,8 +1,7 @@
 import React from "react"
 import { Link } from 'react-router-dom'
-import { Auth, Hub } from 'aws-amplify'
-import { AppBar, Button } from '@material-ui/core';
-import '../styles/Navbar.css'
+import { Auth } from 'aws-amplify'
+import { AppBar, Button } from '@material-ui/core'
 
 const Navbar = () => {
 
